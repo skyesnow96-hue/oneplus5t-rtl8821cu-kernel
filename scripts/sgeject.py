@@ -54,4 +54,3 @@ if __name__ == "__main__":
     dev = sys.argv[1] if len(sys.argv) > 1 else "/dev/sg9"
     print("Ejecting", dev)
     eject(dev)
-EOF
