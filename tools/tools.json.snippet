@@ -1,0 +1,12 @@
+// Snippet of .../zero-kernel-v0.6.4/zkb/manifests/tools.json
+// Replace the "rtl8821cu" entry so the builder clones the injection-capable
+// morrownr driver instead of brektrou/rtl8821CU (which has monitor RX only).
+{
+    "rtl8821cu": {
+        "type": "git",
+        "path": "rtl8821cu",
+        "url": "https://github.com/morrownr/8821cu-20210916",
+        "branch": "main",
+        "commit": ""
+    }
+}
