@@ -124,6 +124,12 @@ Flashing the raw `Image.gz-dtb` directly to the boot partition (`dd`) leaves it 
 - The driver's other `CONFIG_PLATFORM_*` and `CONFIG_*` defaults are fine for in-tree builds
 - `CONFIG_RTL8821CU = y` (export) is the trigger for the built-in `obj-y` path
 
+## Automation scripts
+
+- `scripts/dwa171-switch-now.sh` — one-shot: switches the adapter out of storage mode (run on the phone as root)
+- `scripts/dwa171-service.d.sh` — Magisk `service.d` auto-switch (install into `/data/adb/service.d/dwa171-autoswitch.sh`, chmod 755; runs at boot, polls every 5 s, performs the mode switch automatically on adapter insertion)
+- `scripts/sgeject.py` — direct SG_IO SCSI-eject helper (bypasses libusb)
+
 ## Acknowledgments
 
 - seppzer0/zero_kernel builder (https://github.com/seppzer0/zero_kernel)
